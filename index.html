@@ -224,6 +224,7 @@ async function checkBal() {
   let balance = await window.shoguncont.methods.balanceOf(currentaccount).call();
   console.log(balance);
   document.querySelector("#WSDNBAL").textContent = balance/1000000000000000000 +" WSDN";
+	setTimeout(checkBal, 5000);
 }
 
 
